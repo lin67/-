@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>index</title>
+	<script type="text/javascript" src="../../../jQuery/jquery-3.4.1.js"></script>
+</head>
+<style type="text/css">
+	*{
+		margin:0 0;
+		padding: 0 0;
+	}
+	body{
+		background: url(image/2.png);
+		background-repeat: repeat;
+	}
+	.top{
+		height:50px;
+		width: 100%; 
+		float: left;
+	}
+	.mid{
+		height: 500px;
+		width: 100%;
+		float: left;
+	}
+	.mid1{
+		height: 500px;
+		width: 5%;
+		float: left;
+	}
+	/*.mid2{
+		height: 500px;
+		width: 5%;
+		float: left;
+	}*/
+	.left{
+		height: 500px;
+		width: 30%;
+		float: left;
+	}
+	
+	.topic1{
+		text-align: center;
+		line-height: 50px;
+		font-size: 30px;
+
+	}
+	.left2_1{
+		height: 400px;
+		width: 90%;
+		margin-left: 5%; 
+		margin-right: 5%; 
+		background-color: #fff;
+	}
+	.left2_2{
+		height: 100px;
+		width:90%;
+		float: left;
+		background-color: #ef8d32;
+		margin-left: 5%; 
+		margin-right: 5%; 
+	}
+	.logo1{
+		height: 250px;
+		width: 250px;
+		margin-left: 25%;
+		margin-top: 40px;
+		border-radius: 70px;
+		border:4px solid #ee5a32;
+	}
+	.logo2{
+		/*text-align: center;*/
+/*		line-height: 40px;*/
+		color: #ee5a32;
+		font-weight: bold;
+		font-size: 20px;
+		margin-top: 20px;
+		margin-left: 45%;
+	}
+	.form1{
+		margin-left: 10%;	
+		width: 80%;
+		height: 200px;
+		margin-top: 20%;
+/*		margin-bottom: 200px;*/
+		background-color: #ef8d32;
+	}
+	.form2{
+		height: 400px;
+		width: 85%;
+		margin-left: 30px;
+		color: black;
+		background-color: #fff;
+	}
+	.photo1{
+		height: 90px;
+		width: 90px;
+		border-radius: 100%;
+		margin-left: 35%;
+		margin-top: 1%;
+	}
+	form ul{
+		list-style: none;
+	}
+	form li{
+		height: 100px;
+		width: 100%;
+		border: 1px solid #ccc;
+		outline: none;
+	}
+	li:hover{
+		background: #ee5a32;
+	}
+	input[type="text"] {
+    width: 83%;
+    padding:1em 0em 1em 1.7em;
+    color: #858282;
+    font-size: 15px;
+    outline: none;
+    background: none;
+    font-weight: 500;
+    border: none;
+}
+	.li2:hover {
+		background-color: #fff;
+	}
+	.icon{
+    background: url(image/img-sprite.png);
+    width: 25px;
+    height: 23px;
+    display: inline-block;
+    float:left;
+    
+}
+.icon {
+    background: url(../images/img-sprite.png) no-repeat -1px -2px;
+}
+
+</style>
+<body>
+	<div class="top">
+		<p class="topic1">留言板</p>
+	</div>
+	<div class="top"></div>
+
+
+	<div class="mid">
+		<div class="mid1"></div>
+		<div class="left">
+			<form id="mes2" class="form2">
+				<table id="table1">
+				</table>
+			</form>
+		</div>
+		<div class="left">
+			<div class="left2_1">
+				<img class="logo1" class="logo_1" src="image/b1.jpg">
+				<p class="logo2">程序员</p>
+			</div>
+			<div class="left2_2"></div>
+		</div>
+		<div class="left">
+			<form class="form1">
+				<ul>
+					<li>
+						<img class="photo1" src="image/person_2.jpg">
+					</li>
+					<li class="li2">
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#mes1").keydown(function(event){
+			if(event.keyCode == '13')
+			//判断是否输入的回车键
+			{
+				// alert("123");
+				var str = document.getElementById("mes1").value;
+				// document.getElementById("mes2").value = str;
+					var $tr = $("<tr></tr>");
+					// $tr.append("<td>"+'<img class="photo1" src="image/person_2.jpg">'+"</td>");
+					$tr.append("<td>"+str+"</td>")
+					$("#talbe1").append($tr);
+					alert("留言成功！");
+					document.getElementById("mes1").value='';
+			}
+		});
+		
+	});
+</script>
+				<input id="mes1" type="text" placeholder="发表你的评论："  >
+
+				<a href="#" class="user1"><span class="icon"></span></a>
+			</li>
+				</ul>
+			</form>
+		</div>
+		<div class="mid1"></div>
+
+
+	</div>
+
+
+</body>
+</html>
